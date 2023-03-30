@@ -1,0 +1,20 @@
+/* Mobile First*/
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
