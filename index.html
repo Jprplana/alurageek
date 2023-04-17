@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./CSS/reset.css" />
     <link rel="stylesheet" href="./CSS/header.css" />
     <link rel="stylesheet" href="./CSS/hero.css" />
     <link rel="stylesheet" href="./CSS/productos.css" />
-    <link rel="stylesheet" href="./CSS/acerca.css">
-    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/acerca.css" />
+    <link rel="stylesheet" href="./CSS/footer.css" />
+    <link
+      rel="stylesheet"
+      media="(min-width:768px)"
+      href="./CSS/media_tablet.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,6 +39,15 @@
       <header class="header">
         <div class="logo">
           <img src="./assets/img/Logo_alurageek.svg" alt="logo alurageek" />
+          <div class="search-bar">
+            <input
+              type="search-input"
+              id="site-search"
+              name="buscar"
+              placeholder="Qué deseas buscar?"
+            />
+            <i class="material-symbols-outlined"> search </i>
+          </div>
         </div>
         <button class="btn-login"><p class="btn-login-txt">Login</p></button>
         <i class="material-symbols-outlined"> search </i>
@@ -53,7 +67,7 @@
         </div>
         <section class="productos">
           <!-- CARD 1  -  STAR WARS-->
-          <div class="card">
+          <div class="card" data-product >
             <header class="card-header">
               <title class="card-title">Star Wars</title>
               <a class="ver-todo-link" href="#"
@@ -62,32 +76,11 @@
                   src="./assets/img/arrow_fw_blue_24dp.svg"
               /></a>
             </header>
-            <div class="fila-items">
-              <div class="item">
-                <img src="./assets/img/trooper_head.png" />
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-              <div class="item">
-                <img src="./assets/img/vader_head.png" />
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-            </div>
-            <div class="fila-items">
-              <div class="item">
-                <img src="./assets/img/Yoda_orange.png" />
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-              <div class="item">
-                <img src="./assets/img/trooper_red.png" />
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
+            <div class="card-content" >
+              <div class="fila-items">
+                <div class="item" >
+                  
+                </div>
               </div>
             </div>
           </div>
@@ -102,32 +95,34 @@
                   src="./assets/img/arrow_fw_blue_24dp.svg"
               /></a>
             </header>
-            <div class="fila-items">
-              <div class="item">
-                <img src="./assets/img/joystick_white.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
+            <div class="card-content" data-product>
+              <div class="fila-items">
+                <div class="item">
+                  <img src="./assets/img/joystick_white.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
+                <div class="item">
+                  <img src="./assets/img/ps5.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
               </div>
-              <div class="item">
-                <img src="./assets/img/ps5.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-            </div>
-            <div class="fila-items">
-              <div class="item">
-                <img src="./assets/img/nintendo_console.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-              <div class="item">
-                <img src="./assets/img/nintendo_switch.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
+              <div class="fila-items">
+                <div class="item">
+                  <img src="./assets/img/nintendo_console.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
+                <div class="item">
+                  <img src="./assets/img/nintendo_switch.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
               </div>
             </div>
           </div>
@@ -142,64 +137,89 @@
                   src="./assets/img/arrow_fw_blue_24dp.svg"
               /></a>
             </header>
-            <div class="fila-items">
-              <div class="item">
-                <img src="./assets/img/atari.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
+            <div class="card-content" data-product>
+              <div class="fila-items">
+                <div class="item">
+                  <img src="./assets/img/atari.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
+                <div class="item">
+                  <img src="./assets/img/switch_player.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
               </div>
-              <div class="item">
-                <img src="./assets/img/switch_player.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-            </div>
-            <div class="fila-items">
-              <div class="item">
-                <img src="./assets/img/sonic.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
-              </div>
-              <div class="item">
-                <img src="./assets/img/radioreloj_pink.png"/>
-                <h3 class="nombre-item">Producto XYZ</h3>
-                <p class="precio-item">$60</p>
-                <a class="ver-producto-link" href="#">Ver producto</a>
+              <div class="fila-items">
+                <div class="item">
+                  <img src="./assets/img/sonic.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
+                <div class="item">
+                  <img src="./assets/img/radioreloj_pink.png" />
+                  <h3 class="nombre-item">Producto XYZ</h3>
+                  <p class="precio-item">$60</p>
+                  <a class="ver-producto-link" href="#">Ver producto</a>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section class="acerca">
-            <div class="acerca-info">
-                <img src="./assets/img/Logo_alurageek_grande.svg" alt="logo alurageek">
-                <ul class="info-list">
-                    <li class="info-item"><a href="#">Quiénes somos</a></li>
-                    <li class="info-item"><a href="#">Política de privacidad</a></li>
-                    <li class="info-item"><a href="#">Programa de fidelidad</a></li>
-                    <li class="info-item"><a href="#">Nuestras tiendas</a></li>
-                    <li class="info-item"><a href="#">Quiero ser franquiciado</a></li>
-                    <li class="info-item"><a href="#">Anuncie aquí</a></li>
-                </ul>
-            </div>
-            <div class="acerca-contacto">
-                <p class="contacto-title">Hable con nosotros</p>
-                <form class="contacto-form">
-                    <input class="nombre-input" type="text" placeholder="Nombre" required maxlength="40">
-                    <textarea class="mensaje-input" cols="30" rows="10" placeholder="Escribe tu mensaje" required minlength="10" maxlength="900"></textarea>
-                    <button class="btn-form" type="submit"><p class="btn-form-txt">Enviar mensaje</p></button>
-                </form>
-            </div>
+          <div class="acerca-info">
+            <img
+              src="./assets/img/Logo_alurageek_grande.svg"
+              alt="logo alurageek"
+            />
+            <ul class="info-list">
+              <li class="info-item"><a href="#">Quiénes somos</a></li>
+              <li class="info-item"><a href="#">Política de privacidad</a></li>
+              <li class="info-item"><a href="#">Programa de fidelidad</a></li>
+              <li class="info-item"><a href="#">Nuestras tiendas</a></li>
+              <li class="info-item"><a href="#">Quiero ser franquiciado</a></li>
+              <li class="info-item"><a href="#">Anuncie aquí</a></li>
+            </ul>
+          </div>
+          <div class="acerca-contacto">
+            <p class="contacto-title">Hable con nosotros</p>
+            <form class="contacto-form">
+              <input
+                class="nombre-input"
+                type="text"
+                placeholder="Nombre"
+                required
+                maxlength="40"
+              />
+              <textarea
+                class="mensaje-input"
+                cols="30"
+                rows="10"
+                placeholder="Escribe tu mensaje"
+                required
+                minlength="10"
+                maxlength="900"
+              ></textarea>
+              <button class="btn-form" type="submit">
+                <p class="btn-form-txt">Enviar mensaje</p>
+              </button>
+            </form>
+          </div>
         </section>
       </main>
 
       <footer class="footer">
-        <p class="footer-txt">Copyright © 2023 Juan Pablo Rodríguez Plana. <br> Todos los derechos reservados.</p>
+        <p class="footer-txt">
+          Copyright © 2023 Juan Pablo Rodríguez Plana. <br />
+          Todos los derechos reservados.
+        </p>
       </footer>
     </div>
 
-    <script src="./script.js"></script>
+    <script type="module" src="./controllers/productos-controllers.js"></script>
+
   </body>
 </html>

@@ -9,6 +9,10 @@
     height: 72px;
     background: #ffffff;
   }
+
+  .header .logo .search-bar {
+    display: none;
+}
   
   .btn-login {
     display: flex;
